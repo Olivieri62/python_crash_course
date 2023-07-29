@@ -10,9 +10,9 @@ class AnonymousSurvey:
         """"Show the survey question"""
         print(self.question)
 
-    def store_reponse(self,new_reponse):
+    def store_response(self,new_response):
         """Store a single response to the survey"""
-        self.responses.append(new_reponse)
+        self.responses.append(new_response)
 
     def show_results (self):
         """Show all the responses that habe been given"""

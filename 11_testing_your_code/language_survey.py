@@ -11,7 +11,7 @@ while True:
     response = input("Language : ")
     if response == 'q':
         break
-    language_survey.store_reponse(response)
+    language_survey.store_resEponse(response)
 
 #Show the survey results
 print("\nThank you to everyone who participated in the survey")
