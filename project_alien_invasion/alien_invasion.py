@@ -3,6 +3,7 @@ import sys
 import pygame
 
 from settings import Settings
+from ship import Ship
 
 class AlienInvasion:
     """Overall class to manage game assets and behavior"""
@@ -15,6 +16,7 @@ class AlienInvasion:
         self.settings = Settings()
         self.screen = pygame.display.set_mode((self.settings.screen_width,self.settings.screen_height))
         pygame.display.set_caption("Alien Invasion")
+        self.ship = Ship(self)
 
 
 
@@ -27,6 +29,7 @@ class AlienInvasion:
                     sys.exit()
             #Redraw the screen during each pass trhrough the loop
             self.screen.fill(self.settings.bg_color)
+            self.ship.blitme()
             #Make the most recently drawn screen visible
             pygame.display.flip()
             #Pygame will do its best to make the loop run exactly 60 times per second
@@ -34,6 +37,6 @@ class AlienInvasion:
 
 if __name__ == '__main__':
     #Make agame instance, and run the game
-    ai = AlienInvasion()
-    ai.run_game()
+    ai_game = AlienInvasion()
+    ai_game.run_game()
 
